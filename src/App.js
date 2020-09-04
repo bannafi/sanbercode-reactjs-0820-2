@@ -30,7 +30,6 @@ function App() {
         <input type="submit" value="Kirim" className='button' />
     </form> <br />
   </div>
-    <a href="index.html">Kembali Ke Index</a>
 </body>
     </div>
   );
