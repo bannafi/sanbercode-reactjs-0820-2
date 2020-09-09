@@ -1,4 +1,5 @@
 import React from 'react';
+import ItemBuah from './ItemBuah'
 
 let dataHargaBuah = [
   {nama: "Semangka", harga: 10000, berat: 1000},
@@ -22,16 +23,15 @@ class TabelHargaBuah extends React.Component {
                  <th className="tgC3ow">Nama</th>
                  <th className="tgBaqh">Harga</th>
                  <th className="tgBaqh">Berat</th>
+                 <th className="tgC3ow">Aksi</th>
               </tr>
            </thead>
            <tbody>
-              {dataHargaBuah.map(el => {
+              {dataHargaBuah.map((el, index) => {
               	return (
-              		<tr>
-              			<td className="tgOlax">{el.nama}</td>
-              			<td className="tgOlax">{el.harga}</td>
-              			<td className="tgOlax">{el.berat / 1000} kg</td>
-              		</tr>
+              		<>
+                    <ItemBuah className='tgOlax' item={el} key={index} />
+                  </>
               	)
               })}
            </tbody>
